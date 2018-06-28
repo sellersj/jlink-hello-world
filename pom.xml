@@ -4,11 +4,29 @@
   <groupId>com.github.sellersj</groupId>
   <artifactId>jlink-hello-world</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
   <name>jlink hello world demo</name>
 
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-jlink-plugin</artifactId>
+        <version>3.0.0-alpha-1</version>
+        <extensions>true</extensions>
+        <configuration>
+          <!-- configuration elements goes here -->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <modules>
+    <module>jlink-hello-world-jar</module>
+  </modules>
 
 </project>
