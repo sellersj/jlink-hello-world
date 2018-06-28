@@ -27,6 +27,7 @@
 
   <modules>
     <module>jlink-hello-world-jar</module>
+    <module>jlink-hello-world-jlink</module>
   </modules>
 
 </project>
