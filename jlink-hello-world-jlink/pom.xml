@@ -25,6 +25,7 @@
       <plugin>
         <artifactId>maven-jlink-plugin</artifactId>
       </plugin>
+      <!-- the toolchain or JAVA_HOME have to be set to a jdk 9+ -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-toolchains-plugin</artifactId>
