@@ -11,9 +11,6 @@
   <artifactId>jlink-hello-world-jlink</artifactId>
   <packaging>jlink</packaging>
 
-  <properties>
-    <java.version>10</java.version>
-  </properties>
 
   <dependencies>
     <dependency>
@@ -25,6 +22,9 @@
 
   <build>
     <plugins>
+      <plugin>
+        <artifactId>maven-jlink-plugin</artifactId>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-toolchains-plugin</artifactId>
