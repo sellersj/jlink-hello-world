@@ -1,4 +1,4 @@
-package com.github.sellersj.jlink;
+package com.github.sellersj.jlink.jar;
 
 public class HelloWorld {
 

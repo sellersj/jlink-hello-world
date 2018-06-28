@@ -9,8 +9,8 @@
   </parent>
 
   <artifactId>jlink-hello-world-jlink</artifactId>
+  <!-- eclipse doesn't like packaging = jlink. It doesn't know that it means it's also a jar -->
   <packaging>jlink</packaging>
-
 
   <dependencies>
     <dependency>
