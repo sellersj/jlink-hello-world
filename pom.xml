@@ -14,6 +14,14 @@
     <maven.compiler.release>${java.version}</maven.compiler.release>
   </properties>
 
+  <!-- so we can use the snapshot version of the jlink plugin -->
+  <pluginRepositories>
+    <pluginRepository>
+      <id>apache.snapshots</id>
+      <url>http://repository.apache.org/snapshots/</url>
+    </pluginRepository>
+  </pluginRepositories>
+
   <build>
     <pluginManagement>
       <plugins>
@@ -21,10 +29,20 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.7.0</version>
+          <!-- work around until maven compiler support java 10 / 11 -->
+          <!-- https://stackoverflow.com/a/49398936/2055199 -->
+          <dependencies>
+            <dependency>
+              <groupId>org.ow2.asm</groupId>
+              <artifactId>asm</artifactId>
+              <version>6.2</version> <!-- Use newer version of ASM -->
+            </dependency>
+          </dependencies>
         </plugin>
         <plugin>
           <artifactId>maven-jlink-plugin</artifactId>
-          <version>3.0.0-alpha-1</version>
+          <version>3.0.0-alpha-2-SNAPSHOT</version>
+          <!-- <version>3.0.0-alpha-1</version> -->
           <extensions>true</extensions>
           <configuration>
             <!-- configuration elements goes here -->
