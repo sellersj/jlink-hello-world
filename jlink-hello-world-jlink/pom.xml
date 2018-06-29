@@ -24,6 +24,9 @@
     <plugins>
       <plugin>
         <artifactId>maven-jlink-plugin</artifactId>
+        <configuration>
+          <launcher>launch=com.github.sellersj.jlink.jar/com.github.sellersj.jlink.jar.HelloWorld</launcher>
+        </configuration>
       </plugin>
       <!-- the toolchain or JAVA_HOME have to be set to a jdk 9+ -->
       <plugin>
