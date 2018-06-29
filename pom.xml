@@ -12,6 +12,9 @@
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <maven.compiler.release>${java.version}</maven.compiler.release>
+
+    <!-- work around for the plugins using an older asm -->
+    <asm.version>6.2</asm.version>
   </properties>
 
   <!-- so we can use the snapshot version of the jlink plugin -->
@@ -35,7 +38,7 @@
             <dependency>
               <groupId>org.ow2.asm</groupId>
               <artifactId>asm</artifactId>
-              <version>6.2</version> <!-- Use newer version of ASM -->
+              <version>${asm.version}</version>
             </dependency>
           </dependencies>
         </plugin>
@@ -46,7 +49,18 @@
           <extensions>true</extensions>
           <configuration>
             <!-- configuration elements goes here -->
+            <verbose>true</verbose>
+            <addModules>
+              <!-- <addModule>java.xml.bind</addModule> -->
+            </addModules>
           </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.ow2.asm</groupId>
+              <artifactId>asm</artifactId>
+              <version>${asm.version}</version>
+            </dependency>
+          </dependencies>
         </plugin>
       </plugins>
     </pluginManagement>
