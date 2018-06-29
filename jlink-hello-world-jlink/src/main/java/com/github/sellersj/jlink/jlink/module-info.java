@@ -1,4 +1,6 @@
 module com.github.sellersj.jlink.jlink {
 
-  // requires com.github.sellersj.jlink.jar;
+  // not sure if this is required or if it will automatically be set based on the maven dependencies
+  requires com.github.sellersj.jlink.jar;
+
 }
