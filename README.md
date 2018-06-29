@@ -15,7 +15,7 @@ If you unzip this file, you can run the code like this which will use the packag
 
 Expected output
 ```
-$ bin/java -m com.github.sellersj.jlink.jar/com.github.sellersj.jlink.jar.HelloWorld
+$ bin/launch
 Hello world, java version is: 10.0.1
 ```
 
