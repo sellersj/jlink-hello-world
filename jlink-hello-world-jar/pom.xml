@@ -9,30 +9,4 @@
   </parent>
 
   <artifactId>jlink-hello-world-jar</artifactId>
-
-  <!-- not sure if this worked for creating a runtime jar -->
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <configuration>
-          <archive>
-            <manifest>
-              <addClasspath>true</addClasspath>
-              <!-- <classpathPrefix>libs/</classpathPrefix> -->
-              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-
-              <!-- set the main class -->
-              <mainClass>com.github.sellersj.jlink.jar.HelloWorld</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-
-
-
 </project>
