@@ -59,11 +59,11 @@
           </configuration>
           <dependencies>
             <!-- https://issues.apache.org/jira/browse/MJLINK-19 -->
-            <dependency>
-              <groupId>org.ow2.asm</groupId>
-              <artifactId>asm</artifactId>
-              <version>${asm.version}</version>
-            </dependency>
+            <!-- <dependency> -->
+            <!-- <groupId>org.ow2.asm</groupId> -->
+            <!-- <artifactId>asm</artifactId> -->
+            <!-- <version>${asm.version}</version> -->
+            <!-- </dependency> -->
           </dependencies>
         </plugin>
       </plugins>
